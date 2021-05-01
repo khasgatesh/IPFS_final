@@ -49,4 +49,4 @@ app.get('/Register',(req,res)=>{
 app.get('/Doctor',(req,res)=>{
     res.sendFile(__dirname+'/public/Doctor.html')
 })
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 3030)
