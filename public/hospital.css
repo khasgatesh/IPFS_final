@@ -1,0 +1,68 @@
+img{
+    width:70%!important;
+  }
+  .form{
+     display: inline;
+  }
+  .btn-primary{
+     background-color:#63FFC1;
+     color:white;
+     border: none;
+  }
+  .navbar-dark{
+     background-color:#222930;
+  }
+  
+  
+   .navbar{
+       font-size: 18px;
+   }
+   .row-header{
+     margin:0px auto;
+     padding:0px;
+  }
+  
+  .row-content {
+     margin:0px auto;
+     padding: 50px 0px 50px 0px;
+     border-bottom: 1px ridge;
+     min-height:400px;
+  }
+  
+  .footer{
+     background-color: #222930;
+     margin:0px auto;
+     padding: 20px 0px 20px 0px;
+     margin-top:1em;
+     color:white;
+  }
+  .jumbotron{
+     background-color:#63FFC1 ;
+     margin:0px auto;
+     padding:50px 20px 50px 20px;
+     color:#222930;
+  }
+  .address{
+     font-size:70%;
+     margin:0px auto;
+     color:white;
+  }
+  a{
+     text-decoration: none;
+     color: white;
+     padding: 1em;
+  }
+  .new-user{
+     color:#222930;
+     text-decoration: underline;
+  }
+  #username{
+       color:red;
+  }
+  #pass{
+     color:red;
+  }
+  #form{
+     border:1px solid #222930;
+     box-shadow: 2px 2px 0 0;
+  }

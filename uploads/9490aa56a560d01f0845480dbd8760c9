@@ -1,0 +1,30 @@
+import csv
+import re                                                                 #for regular expression
+from nltk import word_tokenize                                            #for creating tokens
+from nltk.corpus import stopwords                                         #to remove stopwords
+flag=0
+with open('GmailDetails.csv', 'r', encoding='cp850') as csvfile:
+   reader = csv.DictReader(csvfile)
+   for row in reader:
+       # fetch only subject from csv file
+       email_sub = row["Subject"]
+       print("Body: %s" % email_sub)
+       # create token of subject column
+       tokens = word_tokenize(email_sub)
+       print(tokens)
+       #remove stopwords from tokens generated
+       tokens_without_sw = [word for word in tokens if not word in stopwords.words()]
+       print(tokens_without_sw)
+       #subject with date and hyphen
+       date_with_hyphen = re.findall(r"[\d]{1,2}-[\d]{1,2}-[\d]{2}", str(tokens_without_sw))
+       for s in date_with_hyphen:
+           print(s)
+       # subject with date and forward slash
+       date_with_slash = re.findall(r"[\d]{1,2}/[\d]{1,2}/[\d]{4}", str(tokens_without_sw))
+       for p in date_with_slash:
+           print(p)
+       # subject with word date
+       date_with_word = re.findall(r"[\d]{1,2} [ADFJMNOS]\w* [\d]{4}", str(email_sub))
+       for a in date_with_word:
+           print(a)
+       print("---------------------------------------")
